@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/lang
+        http://www.springframework.org/schema/lang/spring-lang.xsd">
+
+
+	
+
+	
+	<bean class="com.Classes.Details" name="studentDetails" autowire="constructor">
+		<property name="id" value="1" />
+		<property name="name" value="mugesh" />
+		<property name="mobNo" value="7904170655" />
+		<property name="hobby">
+			<list>
+				<value>cricket</value>
+				<value>viedogames</value>
+				<value>coding</value>
+			</list>
+		</property>
+	
+	</bean>
+
+	<bean class="com.Classes.Address" name="address">
+		<property name="city" value="mettur" />
+		<property name="district" value="salem" />
+		<property name="state" value="Tamilnadu" />
+	</bean>
+
+
+	<bean class="com.Classes.Qualify" name="qualify">
+		<constructor-arg value="82.5" />
+		<constructor-arg value="67.9" />
+		<constructor-arg>
+		<map>
+		<entry key="cgpa" value ="7.42"/>
+		</map>
+		</constructor-arg>
+	</bean>
+
+
+
+
+</beans>
